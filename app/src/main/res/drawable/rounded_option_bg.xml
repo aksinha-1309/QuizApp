@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- कोने गोल करने के लिए (जितना ज्यादा नंबर, उतना ज्यादा राउंड) -->
+    <corners android:radius="24dp" />
+
+    <!-- बैकग्राउंड का हल्का रंग (जो तुम्हारे ऑप्शन के पीछे दिखेगा) -->
+    <solid android:color="#F1F5F9" />
+
+    <!-- हल्का सा बॉर्डर (Stroke) ताकि बटन साफ दिखे -->
+    <stroke
+        android:width="1.5dp"
+        android:color="#CBD5E1" />
+
+    <!-- अंदर की तरफ पैडिंग/गैप -->
+    <padding
+        android:left="16dp"
+        android:top="12dp"
+        android:right="16dp"
+        android:bottom="12dp" />
+</shape>

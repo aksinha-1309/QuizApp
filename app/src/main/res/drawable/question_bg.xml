@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- बहुत ही गहरा और प्रीमियम टेक-थीम डार्क ग्रेडिएंट बैकग्राउंड -->
+    <gradient
+        android:startColor="#050B14"
+        android:centerColor="#0A192F"
+        android:endColor="#02060D"
+        android:angle="135" />
+
+</shape>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/result_bg"
+    android:padding="24dp">
+
+    <!-- Title: Quiz Completed -->
+
+    <!-- Score TextView -->
+
+    <TextView
+        android:id="@+id/tvResultTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="144dp"
+        android:gravity="center"
+        android:text="QUIZ COMPLETED!"
+        android:textColor="#00E5FF"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivBadgeStar"
+        android:layout_width="60dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="24dp"
+        android:contentDescription="Star Badge"
+        android:src="@drawable/badge_star"
+        app:layout_constraintEnd_toEndOf="@+id/tvResultTitle"
+        app:layout_constraintStart_toStartOf="@+id/tvResultTitle"
+        app:layout_constraintTop_toBottomOf="@id/tvResultTitle" />
+
+
+    <TextView
+        android:id="@+id/tvScore"
+        android:layout_width="144dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="56dp"
+        android:gravity="center"
+        android:text="Your Score: 0/0"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivBadgeStar" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnPlayAgain"
+        android:layout_width="210dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="92dp"
+        android:background="@drawable/btn_tech_bg"
+        android:text="PLAY AGAIN"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tvScore"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="@+id/tvScore"
+        app:layout_constraintTop_toBottomOf="@id/tvScore" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:gravity="center"
+        android:text="Design by Ankur"
+        android:textColor="#00E5FF"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPlayAgain" />
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieCelebration"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:clickable="false"
+        android:focusable="false"
+        app:lottie_rawRes="@raw/fireworks_anim"
+        app:lottie_autoPlay="false"
+        app:lottie_loop="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
