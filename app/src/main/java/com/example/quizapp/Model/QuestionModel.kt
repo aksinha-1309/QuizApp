@@ -1,4 +1,4 @@
-package com.example.quizapp.Model
+package com.ankurapps.quizapp.Model
 
 data class QuestionModel(
     val category: String,

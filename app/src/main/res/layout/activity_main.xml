@@ -7,61 +7,80 @@
     android:background="@drawable/question_bg"
     android:layout_height="match_parent"
     android:padding="16dp">
+
+
+    <TextView
+        android:id="@+id/tvCoinCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="8dp"
+        android:padding="8dp"
+        android:text="🪙 0"
+        android:textColor="#FFD700"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.932"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/tvTimer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Time: 30s"
+        android:layout_marginStart="30dp"
+        android:text="Time: 20s"
+        android:textColor="#FF0000"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:textColor="#FF0000"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"/>
+        app:layout_constraintBottom_toBottomOf="@+id/tvQuestionCounter"
+        app:layout_constraintStart_toEndOf="@+id/tvQuestionCounter"
+        app:layout_constraintTop_toTopOf="@+id/tvQuestionCounter" />
+
     <TextView
         android:id="@+id/tvQuestionCounter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
         android:text="Question: 1/5"
+        android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:textColor="@color/white"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"/>
-    <!-- Question TextView -->
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/tvQuestion"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:fontFamily="@font/lato_bold"
         android:text="Loading Question..."
+        android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:textColor="@color/white"
-        android:fontFamily="@font/lato_bold"
-        android:layout_marginTop="50dp"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Option A -->
     <TextView
         android:id="@+id/tvOptionA"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/rounded_option_bg"
-        android:text="Option A"
-        android:gravity="center"
-        android:textColor="@color/black"
-        android:fontFamily="@font/lato_bold"
         android:backgroundTint="@null"
-        app:layout_constraintTop_toBottomOf="@id/tvQuestion"
+        android:fontFamily="@font/lato_bold"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="Option A"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/tvQuestion" />
 
     <!-- Option B -->
     <TextView
@@ -110,6 +129,28 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvOptionC" />
+    <!-- 50-50 Lifeline Button -->
+
+    <Button
+        android:id="@+id/btnLifeline5050"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginVertical="8dp"
+        android:backgroundTint="#FF9800"
+        android:text="50:50 💡 (20 🪙)"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/btnLanguageToggle"
+        app:layout_constraintEnd_toStartOf="@+id/btnLanguageToggle"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnLanguageToggle" />
+
+    <!-- +15s Extra Time Button (Rewarded Ad / Coins) -->
+
+    <!-- AppLovin Banner Ad Container -->
 
     <Button
         android:id="@+id/btnLanguageToggle"
@@ -118,15 +159,46 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_margin="16dp"
-        android:layout_marginTop="84dp"
+        android:layout_marginEnd="16dp"
         android:backgroundTint="#FF9800"
         android:text="हिंदी / English"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.566"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/btnLifeline5050"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvOptionD" />
+        app:layout_constraintTop_toBottomOf="@+id/btnExtraTime"
+        app:layout_constraintVertical_bias="0.189" />
+
+    <Button
+        android:id="@+id/btnExtraTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginVertical="4dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#2196F3"
+        android:text="+15s Time ⏱️  🎬"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/bannerAdContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvOptionD"
+        app:layout_constraintVertical_bias="0.257" />
+
+    <FrameLayout
+        android:id="@+id/bannerAdContainer"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

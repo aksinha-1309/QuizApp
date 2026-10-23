@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.quizapp"
+    namespace = "com.ankurapps.quizapp"
     compileSdk {
         version = release(37) {
             minorApiLevel = 1
@@ -15,8 +15,8 @@ android {
         applicationId = "com.ankurapps.quizapp"
         minSdk = 24
         targetSdk = 37
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 2
+        versionName = "1.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -48,4 +48,7 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
    // implementation("com.google.android.gms:play-services-ads:23.0.0")
     implementation("com.airbnb.android:lottie:6.3.0")
+
+    implementation("com.startapp:inapp-sdk:4.10.2")
+
 }
